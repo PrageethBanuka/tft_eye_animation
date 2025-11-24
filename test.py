@@ -284,7 +284,7 @@ try:
         # Automatic mood cycling every 15 seconds (if enabled)
         if auto_cycle:
             elapsed = time.time() - last_mood_change
-            if elapsed >= 15:
+            if elapsed >= 60:
                 mood_index = (mood_index + 1) % len(mood_sequence)
                 eyes.mood = mood_sequence[mood_index]
                 print(f"\n[AUTO] Mood: {mood_names[mood_index]}")
